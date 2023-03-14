@@ -1,0 +1,143 @@
+:root {
+
+/* Primary */
+--Bright-orange: hsl(31, 77%, 52%);
+--Dark-cyan: hsl(184, 100%, 22%);
+--Very-dark-cyan: hsl(179, 100%, 13%);
+/* Neutral */
+--Transparent-white-p: hsla(0, 0%, 100%, 0.75);
+/* background, headings, buttons */
+--Very-light-gray: hsl(0, 0%, 95%);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+}
+
+.box {
+    width: 300px;
+    height: 480px;
+}
+
+.box:first-child {
+    background-color: var(--Bright-orange);
+    border-top-left-radius: .6em;
+    border-bottom-left-radius: .6em;
+}
+
+.box:nth-child(2) {
+    background-color: var(--Dark-cyan);
+}
+
+.box:last-child {
+    background-color: var(--Very-dark-cyan);
+    border-top-right-radius: .6em;
+    border-bottom-right-radius: .6em;
+}
+
+.box .box-content {
+    padding: 3.2em;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display';
+    text-transform: uppercase;
+    color: var(--Very-light-gray);
+    padding: .6em 0;
+    font-size: 3em;
+}
+
+p {
+    color: var(--Transparent-white-p);
+    line-height: 1.5em;
+}
+
+.btn {
+    margin-top: 5.5em;
+    padding: 1em;
+    width: 130px;
+    border-radius: 2em;
+    border: 2px solid var(--Very-light-gray);
+    font-family: inherit;
+}
+
+.box:first-child .btn {
+    color: var(--Bright-orange);
+}
+.box:first-child .btn:hover {
+    cursor: pointer;
+    background-color: var(--Bright-orange);
+    color: var(--Very-light-gray);
+}
+
+.box:nth-child(2) .btn {
+    color: var(--Dark-cyan);
+}
+.box:nth-child(2) .btn:hover {
+    cursor: pointer;
+    background-color: var(--Dark-cyan);
+    color: var(--Very-light-gray);
+}
+
+.box:last-child .btn {
+    color: var(--Very-dark-cyan);
+}
+.box:last-child .btn:hover {
+    cursor: pointer;
+    background-color: var(--Very-dark-cyan);
+    color: var(--Very-light-gray);
+}
+
+@media (max-width: 1000px) {
+    .box {
+        width: 250px;
+    }
+    .btn {
+        margin-top: 2em;
+    }
+}
+
+@media (max-width: 780px) {
+    main {
+        height: auto;
+    }
+    .container {
+        flex-direction: column;
+        margin: 5em 2em;
+    }
+    .box {
+        width: 100%;
+        height: auto;
+    }
+    .box:first-child {
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: .6em;
+    }
+    .box:last-child {
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: .6em;
+    }
+}
